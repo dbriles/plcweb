@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <title>Weekly Availability Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Submit Your Availability</h2>
+        <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sunday_date">Sunday (date):</label>
+            <input type="date" id="sunday_date" name="sunday_date" required>
+            <label for="sunday_start_time">Sunday (start time):</label>
+            <input type="time" id="sunday_start_time" name="sunday_start_time" required>
+            <label for="sunday_end_time">Sunday (end time):</label>
+            <input type="time" id="sunday_end_time" name="sunday_end_time" required>
+
+            <label for="monday_date">Monday (date):</label>
+            <input type="date" id="monday_date" name="monday_date" required>
+            <label for="monday_start_time">Monday (start time):</label>
+            <input type="time" id="monday_start_time" name="monday_start_time" required>
+            <label for="monday_end_time">Monday (end time):</label>
+            <input type="time" id="monday_end_time" name="monday_end_time" required>
+
+            <label for="tuesday_date">Tuesday (date):</label>
+            <input type="date" id="tuesday_date" name="tuesday_date" required>
+            <label for="tuesday_start_time">Tuesday (start time):</label>
+            <input type="time" id="tuesday_start_time" name="tuesday_start_time" required>
+            <label for="tuesday_end_time">Tuesday (end time):</label>
+            <input type="time" id="tuesday_end_time" name="tuesday_end_time" required>
+
+            <label for="wednesday_date">Wednesday (date):</label>
+            <input type="date" id="wednesday_date" name="wednesday_date" required>
+            <label for="wednesday_start_time">Wednesday (start time):</label>
+            <input type="time" id="wednesday_start_time" name="wednesday_start_time" required>
+            <label for="wednesday_end_time">Wednesday (end time):</label>
+            <input type="time" id="wednesday_end_time" name="wednesday_end_time" required>
+
+            <label for="thursday_date">Thursday (date):</label>
+            <input type="date" id="thursday_date" name="thursday_date" required>
+            <label for="thursday_start_time">Thursday (start time):</label>
+            <input type="time" id="thursday_start_time" name="thursday_start_time" required>
+            <label for="thursday_end_time">Thursday (end time):</label>
+            <input type="time" id="thursday_end_time" name="thursday_end_time" required>
+
+            <label for="friday_date">Friday (date):</label>
+            <input type="date" id="friday_date" name="friday_date" required>
+            <label for="friday_start_time">Friday (start time):</label>
+            <input type="time" id="friday_start_time" name="friday_start_time" required>
+            <label for="friday_end_time">Friday (end time):</label>
+            <input type="time" id="friday_end_time" name="friday_end_time" required>
+
+            <label for="saturday_date">Saturday (date):</label>
+            <input type="date" id="saturday_date" name="saturday_date" required>
+            <label for="saturday_start_time">Saturday (start time):</label>
+            <input type="time" id="saturday_start_time" name="saturday_start_time" required>
+            <label for="saturday_end_time">Saturday (end time):</label>
+            <input type="time" id="saturday_end_time" name="saturday_end_time" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
