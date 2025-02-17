@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Submission</title>
+    <title>Weekly Availability Submission</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,13 +40,34 @@
 </head>
 <body>
     <div class="container">
-        <h2>Submit Your Info</h2>
+        <h2>Subnmit your availability</h2>
         <form id="myForm">
             <label for="name">Name:</label>
             <input type="text" id="name" required>
             
             <label for="email">Email:</label>
             <input type="email" id="email" required>
+
+            <label for="email">Sunday (date and time):</label>
+            <input type="datetime-local" id="day" required>
+           
+            <label for="email">Monday (date and time):</label>
+            <input type="datetime-local" id="day" required>
+            
+            <label for="email">Tueasday (date and time):</label>
+            <input type="datetime-local" id="day" required>
+            
+            <label for="email">Wednesday (date and time):</label>
+            <input type="datetime-local" id="day" required>
+            
+            <label for="email">Thursday (date and time):</label>
+            <input type="datetime-local" id="day" required>
+            
+            <label for="email">Friday (date and time):</label>
+            <input type="datetime-local" id="day" required>
+            
+            <label for="email">Saturday (date and time):</label>
+            <input type="datetime-local" id="day" required>
             
             <button type="submit">Submit</button>
         </form>
