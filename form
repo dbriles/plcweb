@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .form-group { margin-bottom: 10px; }
+        label { display: block; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 4px; }
+        .buttons { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <form id="event-form">
+        <div class="form-group">
+            <label for="event-title-input">Event Title</label>
+            <input type="text" id="event-title-input" placeholder="Add title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="event-date-input">Start Date</label>
+            <input type="text" id="event-date-input" placeholder="E.g., Feb 17, 2025" required>
+        </div>
+
+        <div class="form-group">
+            <label for="event-startTime">Start Time</label>
+            <input type="text" id="event-startTime" placeholder="11:30 AM" required>
+        </div>
+
+        <div class="form-group">
+            <label for="event-endDate">End Date</label>
+            <input type="text" id="event-endDate" placeholder="E.g., Feb 17, 2025">
+        </div>
+
+        <div class="form-group">
+            <label for="event-endTime">End Time</label>
+            <input type="text" id="event-endTime" placeholder="12:00 PM">
+        </div>
+
+        <div class="form-group">
+            <label for="event-location-input">Location</label>
+            <input type="text" id="event-location-input" placeholder="Add location">
+        </div>
+
+        <div class="form-group">
+            <label for="event-participants-input">Participants</label>
+            <input type="text" id="event-participants-input" placeholder="Add participants">
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="event-allday-checkbox">
+            <label for="event-allday-checkbox">All day</label>
+        </div>
+
+        <div class="form-group">
+            <label for="event-frequency-input">Repeat</label>
+            <select id="event-frequency-input">
+                <option>Does not repeat</option>
+                <option>Daily</option>
+                <option>Weekly</option>
+                <option>Monthly</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="event-calendar-input">Calendar</label>
+            <select id="event-calendar-input">
+                <option>Meeting & Event Calendar</option>
+                <option>Personal Calendar</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="event-notification-input">Notification</label>
+            <input type="number" id="event-notification-input" value="15" min="1">
+            <select id="time-before-event-notification-input">
+                <option>minutes before</option>
+                <option>hours before</option>
+                <option>days before</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="event-description-input">Description</label>
+            <textarea id="event-description-input" placeholder="Add description"></textarea>
+        </div>
+
+        <div class="buttons">
+            <button type="button" id="cancel-btn">Cancel</button>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById("event-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const title = document.getElementById("event-title-input").value;
+            const date = document.getElementById("event-date-input").value;
+            const startTime = document.getElementById("event-startTime").value;
+            
+            if (!title || !date || !startTime) {
+                alert("Please fill in the required fields.");
+                return;
+            }
+            
+            alert("Event saved successfully!");
+            this.reset();
+        });
+
+        document.getElementById("cancel-btn").addEventListener("click", function() {
+            if (confirm("Are you sure you want to cancel?")) {
+                document.getElementById("event-form").reset();
+            }
+        });
+    </script>
+</body>
+</html>
